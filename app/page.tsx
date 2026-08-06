@@ -28,7 +28,7 @@ export default function LandingPage() {
   }, [supabase])
 
   return (
-    <div className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex flex-col justify-between overflow-hidden transition-colors">
+    <div className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex flex-col justify-between overflow-x-clip transition-colors">
       
       {/* Background Ambient Glow Lights */}
       <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-purple-600/20 via-indigo-600/15 to-purple-500/10 rounded-full blur-[140px] pointer-events-none animate-pulse-glow" />

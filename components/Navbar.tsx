@@ -244,9 +244,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Drawer */}
+      {/* Mobile Dropdown Drawer (Floating Overlay - Zero Layout Shift) */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md px-4 py-4 space-y-3 animate-fade-in-down transform-gpu">
+        <div className="absolute top-full left-0 right-0 w-full md:hidden border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl px-4 py-4 space-y-3 shadow-2xl z-50 animate-fade-in-down transform-gpu">
           {/* User Status Bar if Logged In */}
           {user && (
             <div className="flex items-center gap-3 p-3 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">

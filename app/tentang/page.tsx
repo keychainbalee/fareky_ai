@@ -4,7 +4,7 @@ import { Bot, Heart, Shield, ArrowRight } from 'lucide-react'
 
 export default function TentangPage() {
   return (
-    <div className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex flex-col justify-between overflow-hidden transition-colors">
+    <div className="relative min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex flex-col justify-between overflow-x-clip transition-colors">
       
       {/* Background Glow */}
       <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-purple-600/15 dark:bg-purple-600/20 rounded-full blur-[130px] pointer-events-none" />
