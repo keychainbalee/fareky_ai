@@ -6,8 +6,13 @@ import { ThemeProvider } from '@/components/theme-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Fareky AI - LLM Chat Assistant',
-  description: 'AI Chatbot powered by Groq and Supabase',
+  title: 'Fareky AI - Asisten Cerdas Tanpa Batas',
+  description: 'Platform kecerdasan buatan cerdas untuk menjawab pertanyaan, penulisan kode, ringkasan materi, dan eksplorasi ide secara real-time.',
+  icons: {
+    icon: '/vercel.svg',
+    shortcut: '/vercel.svg',
+    apple: '/vercel.svg',
+  },
 }
 
 export default function RootLayout({
