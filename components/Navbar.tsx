@@ -198,6 +198,14 @@ export default function Navbar() {
                   </div>
 
                   <Link
+                    href="/profil"
+                    onClick={() => setIsUserDropdownOpen(false)}
+                    className="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-xl text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition"
+                  >
+                    <UserIcon size={15} /> Profil Saya
+                  </Link>
+
+                  <Link
                     href="/chat"
                     onClick={() => setIsUserDropdownOpen(false)}
                     className="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-xl text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/40 transition"
@@ -249,7 +257,11 @@ export default function Navbar() {
         <div className="absolute top-full left-0 right-0 w-full md:hidden border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl px-4 py-4 space-y-3 shadow-2xl z-50 animate-fade-in-down transform-gpu">
           {/* User Status Bar if Logged In */}
           {user && (
-            <div className="flex items-center gap-3 p-3 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+            <Link
+              href="/profil"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center gap-3 p-3 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-purple-500/40 transition"
+            >
               {userAvatar ? (
                 <img
                   src={userAvatar}
@@ -264,9 +276,9 @@ export default function Navbar() {
               )}
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">{userName}</p>
-                <p className="text-[10px] text-zinc-400 truncate">{userEmail}</p>
+                <p className="text-[10px] text-purple-600 dark:text-purple-400 font-semibold truncate">Lihat Profil Saya →</p>
               </div>
-            </div>
+            </Link>
           )}
 
           <div className="flex flex-col space-y-1">
@@ -288,6 +300,13 @@ export default function Navbar() {
 
           {user ? (
             <div className="pt-2 border-t border-zinc-100 dark:border-zinc-800/80 space-y-2">
+              <Link
+                href="/profil"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center justify-center gap-2 w-full py-2.5 text-xs font-bold rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200"
+              >
+                <UserIcon size={16} /> Profil Saya
+              </Link>
               <Link
                 href="/chat"
                 onClick={() => setIsMobileMenuOpen(false)}
