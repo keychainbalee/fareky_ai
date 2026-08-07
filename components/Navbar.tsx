@@ -125,9 +125,9 @@ export default function Navbar() {
         {/* Brand Logo with Glow Effect */}
         <Link href="/" className="flex items-center gap-2.5 group relative transform-gpu">
           <div className="relative">
-            <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 opacity-40 blur-sm group-hover:opacity-80 transition-opacity duration-300" />
-            <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white shadow-md shadow-purple-500/20 group-hover:scale-105 transition-transform duration-200 ease-out transform-gpu">
-              <Bot size={22} />
+            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 opacity-40 blur-sm group-hover:opacity-80 transition-opacity duration-300" />
+            <div className="relative flex h-9 w-9 items-center justify-center rounded-2xl shadow-md group-hover:scale-105 transition-transform duration-200 ease-out transform-gpu overflow-hidden">
+              <img src="/fareky-logo.jpg" alt="Fareky AI Logo" className="h-full w-full object-cover rounded-2xl" />
             </div>
           </div>
           <span className="font-extrabold text-xl tracking-tight text-zinc-900 dark:text-zinc-100 flex items-center gap-1">

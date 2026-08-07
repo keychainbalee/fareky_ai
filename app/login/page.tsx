@@ -44,8 +44,11 @@ function LoginForm() {
 
         {/* Logo & Header */}
         <div className="text-center space-y-2 pt-2">
-          <div className="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white shadow-xl shadow-purple-500/25 mb-2 animate-float">
-            <Bot size={32} />
+          <div className="relative inline-block group animate-fade-in-down mb-2">
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-purple-600 to-indigo-600 opacity-50 blur-md group-hover:opacity-100 transition-opacity duration-300 animate-pulse-glow" />
+            <div className="relative flex h-16 w-16 items-center justify-center rounded-3xl shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out transform-gpu animate-float mx-auto overflow-hidden">
+              <img src="/fareky-logo.jpg" alt="Fareky AI Logo" className="h-full w-full object-cover rounded-3xl" />
+            </div>
           </div>
           <h1 className="text-2xl font-black tracking-tight flex items-center justify-center gap-1.5">
             Masuk ke Fareky <span className="text-purple-600 dark:text-purple-400">AI</span>

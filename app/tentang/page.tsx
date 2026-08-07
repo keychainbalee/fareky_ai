@@ -13,8 +13,11 @@ export default function TentangPage() {
 
       <main className="relative z-10 max-w-3xl mx-auto px-6 py-12 md:py-16 space-y-10">
         <div className="text-center space-y-4 animate-fade-in-down">
-          <div className="inline-flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white shadow-xl shadow-purple-500/25 mb-2 animate-float">
-            <Bot size={36} />
+          <div className="relative inline-block group animate-fade-in-down mb-2">
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-purple-600 to-indigo-600 opacity-50 blur-md group-hover:opacity-100 transition-opacity duration-300 animate-pulse-glow" />
+            <div className="relative flex h-20 w-20 items-center justify-center rounded-3xl shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out transform-gpu animate-float overflow-hidden">
+              <img src="/fareky-logo.jpg" alt="Fareky AI Logo" className="h-full w-full object-cover rounded-3xl" />
+            </div>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
             Mengenal <span className="bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent">Fareky AI</span>
