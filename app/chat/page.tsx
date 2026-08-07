@@ -277,8 +277,8 @@ export default function ChatPage() {
         <div className="flex flex-col h-full space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-zinc-200/80 dark:border-zinc-800/80">
             <div className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white shadow-md shadow-purple-500/20">
-                <Bot size={22} />
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl shadow-md overflow-hidden shrink-0">
+                <img src="/fareky-logo.jpg" alt="Fareky AI Logo" className="h-full w-full object-cover rounded-xl" />
               </div>
               <span className="font-extrabold text-lg tracking-tight">
                 Fareky <span className="text-purple-600 dark:text-purple-400">AI</span>
@@ -422,8 +422,8 @@ export default function ChatPage() {
         <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
           {messages.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center p-6 space-y-6 max-w-2xl mx-auto animate-fade-in-up">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white shadow-xl shadow-purple-500/25 animate-float">
-                <Bot size={36} />
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl shadow-xl animate-float overflow-hidden">
+                <img src="/fareky-logo.jpg" alt="Fareky AI Logo" className="h-full w-full object-cover rounded-2xl" />
               </div>
               <div>
                 <h3 className="text-2xl font-extrabold text-zinc-800 dark:text-zinc-100 tracking-tight">

@@ -22,13 +22,17 @@ export default function ChatMessage({ role, content, isLoading }: ChatMessagePro
     >
       {/* Avatar Icon */}
       <div
-        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl shadow-md ${
+        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl shadow-md overflow-hidden ${
           isUser
             ? 'bg-gradient-to-tr from-purple-600 to-indigo-600 text-white'
-            : 'bg-zinc-800 dark:bg-zinc-800 text-purple-400 border border-zinc-700/50'
+            : 'border border-zinc-700/50'
         }`}
       >
-        {isUser ? <User size={18} /> : <Bot size={20} />}
+        {isUser ? (
+          <User size={18} />
+        ) : (
+          <img src="/fareky-logo.jpg" alt="Fareky AI" className="h-full w-full object-cover rounded-xl" />
+        )}
       </div>
 
       {/* Bubble Content */}
