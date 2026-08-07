@@ -167,7 +167,7 @@ export default function ProfilPage() {
           </div>
 
           {/* Details Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             
             <div className="p-4 rounded-2xl bg-zinc-50/50 dark:bg-zinc-950/40 border border-zinc-200/60 dark:border-zinc-800/60 space-y-1">
               <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
@@ -193,15 +193,6 @@ export default function ProfilPage() {
               </span>
               <p className="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 capitalize">
                 {provider}
-              </p>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-zinc-50/50 dark:bg-zinc-950/40 border border-zinc-200/60 dark:border-zinc-800/60 space-y-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
-                <UserIcon size={13} className="text-purple-500" /> ID Pengguna
-              </span>
-              <p className="text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 truncate">
-                {user.id}
               </p>
             </div>
 
