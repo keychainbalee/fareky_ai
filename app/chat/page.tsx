@@ -422,9 +422,6 @@ export default function ChatPage() {
         <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
           {messages.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center p-6 space-y-6 max-w-2xl mx-auto animate-fade-in-up">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl shadow-xl animate-float overflow-hidden">
-                <img src="/fareky-logo.jpg" alt="Fareky AI Logo" className="h-full w-full object-cover rounded-2xl" />
-              </div>
               <div>
                 <h3 className="text-2xl font-extrabold text-zinc-800 dark:text-zinc-100 tracking-tight">
                   Halo, {userName}!
