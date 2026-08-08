@@ -122,20 +122,22 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200/60 dark:border-zinc-800/60 bg-white/85 dark:bg-zinc-950/85 backdrop-blur-md transition-colors duration-200 transform-gpu">
       <div className="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         
-        {/* Brand Logo with Glow Effect */}
-        <Link href="/" className="flex items-center gap-2.5 group relative transform-gpu">
-          <div className="relative">
-            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 opacity-40 blur-sm group-hover:opacity-80 transition-opacity duration-300" />
-            <div className="relative flex h-9 w-9 items-center justify-center rounded-2xl shadow-md group-hover:scale-105 transition-transform duration-200 ease-out transform-gpu overflow-hidden">
-              <img src="/fareky-logo.jpg" alt="Fareky AI Logo" className="h-full w-full object-cover rounded-2xl" />
+        {/* Left Section: Brand Logo */}
+        <div className="flex items-center gap-2.5 shrink-0 md:w-48">
+          <Link href="/" className="flex items-center gap-2.5 group relative transform-gpu">
+            <div className="relative">
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 opacity-40 blur-sm group-hover:opacity-80 transition-opacity duration-300" />
+              <div className="relative flex h-9 w-9 items-center justify-center rounded-2xl shadow-md group-hover:scale-105 transition-transform duration-200 ease-out transform-gpu overflow-hidden">
+                <img src="/fareky-logo.jpg" alt="Fareky AI Logo" className="h-full w-full object-cover rounded-2xl" />
+              </div>
             </div>
-          </div>
-          <span className="font-extrabold text-xl tracking-tight text-zinc-900 dark:text-zinc-100 flex items-center gap-1">
-            Fareky <span className="text-purple-600 dark:text-purple-400">AI</span>
-          </span>
-        </Link>
+            <span className="font-extrabold text-xl tracking-tight text-zinc-900 dark:text-zinc-100 flex items-center gap-1">
+              Fareky <span className="text-purple-600 dark:text-purple-400">AI</span>
+            </span>
+          </Link>
+        </div>
 
-        {/* Desktop Navigation Links */}
+        {/* Center Section: Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-1 bg-zinc-100/90 dark:bg-zinc-900/90 p-1.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 shadow-inner">
           {navLinks.map((link) => {
             const isActive = pathname === link.href
@@ -155,8 +157,8 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Desktop Action Buttons */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Right Section: Desktop Action Buttons (Right Aligned, Equal Width) */}
+        <div className="hidden md:flex items-center justify-end gap-3 shrink-0 md:w-48">
           <ThemeToggle />
 
           {isLoadingAuth ? (
@@ -183,7 +185,7 @@ export default function Navbar() {
                   )}
                   <span className="absolute bottom-0 right-0 h-2 w-2 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-zinc-900" />
                 </div>
-                <span className="text-xs font-semibold max-w-[120px] truncate text-zinc-800 dark:text-zinc-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                <span className="text-xs font-semibold max-w-[100px] truncate text-zinc-800 dark:text-zinc-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                   {userName}
                 </span>
                 <ChevronDown size={14} className={`text-zinc-400 transition-transform duration-200 ease-out transform-gpu ${isUserDropdownOpen ? 'rotate-180' : ''}`} />
