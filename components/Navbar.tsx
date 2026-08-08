@@ -168,24 +168,9 @@ export default function Navbar() {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
-                className="flex items-center gap-2.5 p-1.5 pr-3 rounded-2xl bg-zinc-100/90 dark:bg-zinc-900/90 hover:bg-zinc-200/70 dark:hover:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-800 transition-all duration-200 shadow-sm group transform-gpu"
+                className="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-zinc-100/90 dark:bg-zinc-900/90 hover:bg-zinc-200/70 dark:hover:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-800 transition-all duration-200 shadow-sm group transform-gpu"
               >
-                <div className="relative">
-                  {userAvatar ? (
-                    <img
-                      src={userAvatar}
-                      alt={userName || 'User Avatar'}
-                      referrerPolicy="no-referrer"
-                      className="h-7 w-7 rounded-xl object-cover ring-2 ring-purple-500/30"
-                    />
-                  ) : (
-                    <div className="h-7 w-7 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-inner">
-                      {userName ? userName.charAt(0).toUpperCase() : <UserIcon size={14} />}
-                    </div>
-                  )}
-                  <span className="absolute bottom-0 right-0 h-2 w-2 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-zinc-900" />
-                </div>
-                <span className="text-xs font-semibold max-w-[100px] truncate text-zinc-800 dark:text-zinc-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                <span className="text-xs font-semibold max-w-[120px] truncate text-zinc-800 dark:text-zinc-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                   {userName}
                 </span>
                 <ChevronDown size={14} className={`text-zinc-400 transition-transform duration-200 ease-out transform-gpu ${isUserDropdownOpen ? 'rotate-180' : ''}`} />
@@ -262,20 +247,8 @@ export default function Navbar() {
             <Link
               href="/profil"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-3 p-3 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-purple-500/40 transition"
+              className="flex items-center justify-between p-3 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-purple-500/40 transition"
             >
-              {userAvatar ? (
-                <img
-                  src={userAvatar}
-                  alt={userName || 'Avatar'}
-                  referrerPolicy="no-referrer"
-                  className="h-9 w-9 rounded-xl object-cover"
-                />
-              ) : (
-                <div className="h-9 w-9 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-sm">
-                  {userName?.charAt(0).toUpperCase()}
-                </div>
-              )}
               <div className="flex-1 min-w-0">
                 <p className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">{userName}</p>
                 <p className="text-[10px] text-purple-600 dark:text-purple-400 font-semibold truncate">Lihat Profil Saya →</p>
